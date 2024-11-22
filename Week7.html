@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Space Animation</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="animation-container">
+<div class="animation">
+<img
+src="https://th.bing.com/th/id/OIP.e1FBc5v1GSc_FrOpIRGz1gHaHN?rs=1&pid=ImgDetMain"
+alt="Astronaut" class="image astronaut">
+<img
+src="https://images.pexels.com/photos/73871/rocket-launch-rocket-take-off-nasa-73871
+.jpeg?cs=srgb&dl=space-rocket-launching-73871.jpg&fm=jpg" alt="Rocket" class="image
+rocket">
+<img
+src="https://facts.net/wp-content/uploads/2020/03/AdobeStock_105677222.jpeg"
+alt="Space" class="image space">
+</div>
+</div>
+</body>
+</html>
+<style>
+
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+body {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+background-color: #000; /* Black background for space effect */
+}
+.animation-container {
+position: relative;
+width: 400px; /* Set a width for the animation */
+height: 400px; /* Set a height for the animation */
+overflow: hidden;
+}
+.animation {
+position: absolute;
+width: 100%;
+height: 100%;
+}
+.image {
+position: absolute;
+width: 100%;
+height: 100%;
+opacity: 0;
+animation: fade 9s infinite; /* Adjust duration for the entire animation cycle
+*/
+}
+.astronaut {
+animation-name: fadeAstronaut;
+}
+.rocket {
+animation-name: fadeRocket;
+}
+.space {
+animation-name: fadeSpace;
+}
+@keyframes fadeAstronaut {
+0%, 10% {
+opacity: 1;
+}
+30%, 100% {
+opacity: 0;
+}
+}
+@keyframes fadeRocket {
+10%, 40% {
+opacity: 1;
+}
+60%, 100% {
+opacity: 0;
+}
+}
+@keyframes fadeSpace {
+40%, 70% {
+opacity: 1;
+}
+80%, 100% {
+opacity: 0;
+}
+}
+</style>
